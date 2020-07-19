@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="e1" class="com.cognizant.springlearn.entity.Employee">
+		<property name="id" value="7000" />
+		<property name="name" value="Nayan Bhiwapurkar" />
+		<property name="salary" value="50000" />
+		<property name="type" value="permanent" />
+		<property name="dateOfBirth" value="22/10/1997" />
+	</bean>
+
+	<bean id="e2" class="com.cognizant.springlearn.entity.Employee">
+		<property name="id" value="7001" />
+		<property name="name" value="Tejas Mahapatra" />
+		<property name="salary" value="49000" />
+		<property name="type" value="permanent" />
+		<property name="dateOfBirth" value="07/05/1998" />
+	</bean>
+
+	<bean id="e3" class="com.cognizant.springlearn.entity.Employee">
+		<property name="id" value="7002" />
+		<property name="name" value="Nayan Sakhala" />
+		<property name="salary" value="48000" />
+		<property name="type" value="temporary" />
+		<property name="dateOfBirth" value="29/08/1998" />
+	</bean>
+
+	<bean id="e4" class="com.cognizant.springlearn.entity.Employee">
+		<property name="id" value="7003" />
+		<property name="name" value="Dipak Salunke" />
+		<property name="salary" value="47000" />
+		<property name="type" value="permanent" />
+		<property name="dateOfBirth" value="15/09/1997" />
+	</bean>
+
+	<bean id="e5" class="com.cognizant.springlearn.entity.Employee">
+		<property name="id" value="7004" />
+		<property name="name" value="Sarvesh Digraje" />
+		<property name="salary" value="45000" />
+		<property name="type" value="temporary" />
+		<property name="dateOfBirth" value="30/05/1998" />
+	</bean>
+
+	<bean id="employeeList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="e1"></ref>
+				<ref bean="e2"></ref>
+				<ref bean="e3"></ref>
+				<ref bean="e4"></ref>
+				<ref bean="e5"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>
