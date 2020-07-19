@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="m1" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="1" />
+		<property name="name" value="Aloo Parathe" />
+		<property name="price" value="50.00" />
+		<property name="active" value="1" />
+		<property name="dateOfLaunch" value="16/01/2018" />
+		<property name="category" value="Breakfast" />
+		<property name="freeDelivery" value="0"></property>
+	</bean>
+
+	<bean id="m2" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="2" />
+		<property name="name" value="Paneer Malai" />
+		<property name="price" value="200.00" />
+		<property name="active" value="1" />
+		<property name="dateOfLaunch" value="20/10/2019" />
+		<property name="category" value="Main Course" />
+		<property name="freeDelivery" value="0"></property>
+	</bean>
+
+	<bean id="m3" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="3" />
+		<property name="name" value="Paneer Tikka" />
+		<property name="price" value="180.00" />
+		<property name="active" value="1" />
+		<property name="dateOfLaunch" value="20/11/2019" />
+		<property name="category" value="Main Course" />
+		<property name="freeDelivery" value="0"></property>
+	</bean>
+
+	<bean id="menuList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="m1" />
+				<ref bean="m2" />
+				<ref bean="m3" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="cartItemList1" class="com.cognizant.truyum.model.Cart"
+		scope="prototype">
+		<constructor-arg value="100" />
+		<constructor-arg>
+			<list>
+				<ref bean="m1" />
+				<ref bean="m3" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+</beans>
