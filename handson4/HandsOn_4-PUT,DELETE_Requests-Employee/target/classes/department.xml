@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="d1" class="com.cognizant.springlearn.entity.Department">
+		<property name="id" value="1" />
+		<property name="name" value="Administration" />
+	</bean>
+
+	<bean id="d2" class="com.cognizant.springlearn.entity.Department">
+		<property name="id" value="2" />
+		<property name="name" value="Accounts" />
+	</bean>
+
+
+	<bean id="departmentList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="d1"></ref>
+				<ref bean="d2"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+</beans>
